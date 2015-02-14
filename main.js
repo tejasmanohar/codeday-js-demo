@@ -196,7 +196,7 @@ var toastCheck = function(myToast){
   }
 }
 
-// Function declaration (results in "hoisting"):
+// Function declaration (alternate way)
 function toastCheck(myToast){
   if (myToast.smell == "burnt")
   {
@@ -208,38 +208,10 @@ function toastCheck(myToast){
   }
 }
 
-var howIsMyToastDoing = toastCheck(myToast);
+console.log(toastCheck(myToast));
 
 
-/*
-  We will be using function expressions for the most part, as they behave in a manner that is straightforward.
-  Function declarations have an unusual effect known as "hoisting" which means that any
-    function declarations move to the top of their scope.  This means that you can call
-    a function declaration in code before it is actually declared
-
-    More importantly, function declarations are often used to create "classes" of objects
-    which partially mimic standard object-oriented languages.  We will use THIS functionality later on.
-*/
-
-//Hoisting example:
-
-function addTwoNumbers(a, b){
-  return a + b;
-}
-var test = addTwoNumbers(4, 5);
-function addTwoNumbers(a, b){
-  return a - b;
-}
-
-var testTwo = multiplyTwoNumber(4,5);
-var multiplyTwoNumber = function(a,b){
-  return a * b;
-}
-
-
-
-
-//Class example:
+// constructor fn
 function Dude(name, job)
 {
   this.Name = name;
@@ -260,9 +232,9 @@ someDude.sayMyName();
 
 // Getting stuff done with Logic:
 // if statements
-  var thereAreDoughnuts = "Heck no!";
+  var thereAreDoughnuts = "no!";
 
-  if (thereAreDoughnuts == "Heck yeah!")
+  if (thereAreDoughnuts == "yeah!")
   {
     goNuts();
   }
