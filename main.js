@@ -222,7 +222,7 @@ function Dude(name, job)
   }
 }
 
-SayMyName();  // won't work
+SayMyName(); // won't work because scope
 
 var someDude = new Dude("Mario", "Plumber");
 someDude.sayMyName();
