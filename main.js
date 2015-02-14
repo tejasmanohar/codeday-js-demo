@@ -81,6 +81,9 @@
     || double pipe indicates that either side of an evaluation must be true
       example:  if (x == 5 || x == 6)
 
+
+  side-note -> always use === since type coercion -> http://www.impressivewebs.com/why-use-triple-equals-javascipt/
+
 */
 
 
@@ -331,7 +334,7 @@ for(y = 0; y < 5; y++)
   var printBalloons = function() {
     for(var i = 0; i < balloons.length; i++) {
       console.log("color: " + balloons[i].color);
-      if(balloons[i].isPopped === true) {
+      if(balloons[i].isPopped == true) {
         console.log("popped: yes\n")
       } else {
         console.log("popped: no\n")
